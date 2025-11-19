@@ -4,15 +4,19 @@ import { AuthModule } from '@thallesp/nestjs-better-auth';
 import { auth } from './utils/auth';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { CarEntity } from './modules/car/car.entity';
+import { CarModule } from './modules/car/car.module';
+import { User } from './modules/user/user.entity';
 
 @Module({
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
       url: process.env.DATABASE_URL,
-      entities: [],
+      entities: [CarEntity, User],
       synchronize: true,
     }), // Database configuration
+    CarModule,
     AuthModule.forRoot({
       auth,
       isGlobal: true, // Make auth module global
