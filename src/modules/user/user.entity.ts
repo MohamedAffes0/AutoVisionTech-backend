@@ -23,9 +23,6 @@ export class User {
   @IsUrl()
   image: string;
 
-  @Column({ nullable: true })
-  location: string;
-
   @Column({
     nullable: true,
     type: 'enum',
