@@ -45,10 +45,6 @@ export const ROLE_PERMISSIONS: Record<UserRole, Permission[]> = {
   admin: [
     // Admins have all permissions
     Permission.MANAGE_USERS,
-    Permission.MANAGE_CARS,
-    Permission.CREATE_CAR,
-    Permission.UPDATE_CAR,
-    Permission.DELETE_CAR,
     Permission.MANAGE_COMMENTS,
     Permission.DELETE_ANY_COMMENT,
     Permission.MANAGE_RESERVATIONS,
