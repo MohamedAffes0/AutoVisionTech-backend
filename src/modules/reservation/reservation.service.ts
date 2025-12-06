@@ -7,6 +7,20 @@ import { Repository, SelectQueryBuilder } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 import { ReservationFilterDto } from './dto/reservation-filter.dto';
 
+/**
+ * Service for managing reservations.
+ * Provides methods to create, retrieve, update, and delete reservations,
+ * as well as filtering and pagination capabilities.
+ *
+ * Methods:
+ * - findAll: Retrieve all reservations with optional filters and pagination.
+ * - findOne: Retrieve a single reservation by its ID.
+ * - createReservation: Create a new reservation for a specified car.
+ * - updateReservation: Update an existing reservation by its ID.
+ * - deleteReservation: Delete a reservation by its ID.
+ *
+ * Throws NotFoundException if the specified reservation or car is not found.
+ */
 @Injectable()
 export class ReservationService {
   constructor(
@@ -16,7 +30,7 @@ export class ReservationService {
     private readonly carRepository: Repository<CarEntity>,
   ) {}
 
-  applyFilters(
+  private applyFilters(
     qb: SelectQueryBuilder<ReservationEntity>,
     filters: ReservationFilterDto,
   ): void {

@@ -10,6 +10,9 @@ import {
   Min,
 } from 'class-validator';
 
+/**
+ * Data Transfer Object for updating a car.
+ */
 export class UpdateCarDto {
   @IsOptional()
   @IsString()

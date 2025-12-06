@@ -1,5 +1,8 @@
 import { IsIn, IsNumberString, IsOptional, IsString } from 'class-validator';
 
+/**
+ * Data Transfer Object for filtering cars.
+ */
 export class CarFilterDto {
   @IsOptional()
   @IsString()
