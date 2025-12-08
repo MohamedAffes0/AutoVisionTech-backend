@@ -11,6 +11,9 @@ import {
   Min,
 } from 'class-validator';
 
+/**
+ * Data Transfer Object for creating a car.
+ */
 export class CreateCarDto {
   @IsNotEmpty()
   @IsString()

@@ -4,6 +4,17 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { CommentEntity } from './comment.entity';
 import { Repository } from 'typeorm';
 import { CarEntity } from '../car/car.entity';
+
+/**
+ * Service for managing comments.
+ * Provides methods to create and retrieve comments associated with cars.
+ *
+ * Methods:
+ * - create: Create a new comment for a specified car.
+ * - findByCarId: Retrieve all comments for a specific car by its ID.
+ *
+ * Throws NotFoundException if the specified car is not found when creating a comment.
+ */
 @Injectable()
 export class CommentService {
   constructor(

@@ -15,12 +15,14 @@ import { Public } from 'src/auth/decorators/public.decorator';
 export class CommentController {
   constructor(private readonly commentService: CommentService) {}
 
+  // Post /comments -> create a new comment
   @Post()
   @Public()
   create(@Body() createCommentDto: CreateCommentDto) {
     return this.commentService.create(createCommentDto);
   }
 
+  // Get /comments/car/:carId -> get comments by car ID
   @Get('car/:carId')
   @Public()
   findByCarId(@Param('carId') carId: string) {

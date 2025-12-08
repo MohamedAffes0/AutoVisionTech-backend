@@ -1,5 +1,8 @@
 import { IsEmail, IsOptional, IsString, MinLength } from 'class-validator';
 
+/**
+ * Data Transfer Object for updating user profile.
+ */
 export class UpdateProfileDto {
   @IsOptional()
   @IsString()

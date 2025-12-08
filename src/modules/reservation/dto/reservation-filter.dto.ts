@@ -6,6 +6,9 @@ import {
   IsDateString,
 } from 'class-validator';
 
+/**
+ * Data Transfer Object for filtering reservations.
+ */
 export class ReservationFilterDto {
   @IsOptional()
   @IsString()

@@ -7,6 +7,9 @@ import {
   IsDateString,
 } from 'class-validator';
 
+/**
+ * Data Transfer Object for creating a reservation.
+ */
 export class CreateReservationDto {
   @IsNotEmpty()
   @IsString()
