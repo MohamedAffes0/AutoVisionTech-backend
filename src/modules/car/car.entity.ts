@@ -54,7 +54,7 @@ export class CarEntity {
 
   @ManyToOne(() => User, {
     eager: false,
-    onDelete: 'CASCADE',
+    onDelete: 'SET NULL',
   })
   @JoinColumn({ name: 'userId' })
   user: User;
