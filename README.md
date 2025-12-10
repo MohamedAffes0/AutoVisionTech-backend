@@ -7,8 +7,8 @@
 <p align="center">
     <img src="https://img.shields.io/badge/Made%20with-NestJS-red.svg">
     <img src="https://img.shields.io/badge/Database-PostgreSQL-blue.svg">
-    <img src="https://img.shields.io/badge/License-MIT-green.svg">
     <img src="https://img.shields.io/badge/Auth-Better--Auth-orange.svg">
+    <img src="https://img.shields.io/badge/License-Proprietary-green.svg">
 </p>
 
 ---
